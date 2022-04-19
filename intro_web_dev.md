@@ -7,9 +7,9 @@ Note: <mark> cmd+alt+i </mark>to inspect page for html/css/network requests, etc
 - **data base**: holds data/info
 - **API**: Application programming interface. Is an interface that replays messages from software A to software B.  (Software could be application, database, browser, devices, etc.. )
   - If there's a button or URL path, there's an API behind it. 
-    - ie- to read the NYT top stories, we use the NYT Top Stories API
-    - https://developer.nytimes.com/docs/top-stories-product/1/overview
-    - https://developer.nytimes.com/apis
+    - ie- to read the NYT top stories, we use the NYT Top Stories API:
+    - [NYT Top stories API](https://developer.nytimes.com/docs/top-stories-product/1/overview)
+    - [NYT APIs](https://developer.nytimes.com/apis)
 ---
 ## Client-server model
 - **Client**: ac computer who sends request for a resource to a server  
