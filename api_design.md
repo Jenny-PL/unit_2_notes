@@ -73,6 +73,6 @@ request body (JSON):
 ---
 ## Class examples of API designs:
 ### Bookstore
-![HTTP response/request table for bookstore](HTTP.request.response.png)
+![HTTP response/request table for bookstore](http.request.response.png)
 ### Planets
-![Planets HTTP response/request table](HTTP.request.response.Planets.png)
+![Planets HTTP response/request table](http.request.response.Planets.png)
