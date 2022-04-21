@@ -1,5 +1,5 @@
 # Flask intro
-
+Flask acts as a web server. It needs to be running to be able to recieve and send back responses. (<mark>Q: Is this accurate?</mark>)
 
 ```.
 ├── app

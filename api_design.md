@@ -71,3 +71,4 @@ request body (JSON):
     HTTP response: 201 Created, no response body
 
 ---
+![HTTP response/request table for bookstore](HTTP.request.response.png)
