@@ -75,4 +75,4 @@ request body (JSON):
 ### Bookstore
 ![HTTP response/request table for bookstore](HTTP.request.response.png)
 ### Planets
-![Planets HTTP response/request table](http.request.response.Planets.png)
+![Planets HTTP response/request table](HTTP.request.response.Planets.png)
