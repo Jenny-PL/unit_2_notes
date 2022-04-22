@@ -13,7 +13,8 @@
 - AWS: load balancers can be included in this service
 - Nginx
 - Kemp
-- ...
+- Citrix
+- 
 
 **Software vs hardware** loadbalancers
 
