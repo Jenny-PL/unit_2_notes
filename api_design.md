@@ -1,6 +1,10 @@
 [Article with helpful API design tips](https://www.coderslexicon.com/8-tips-to-a-better-api-design/)
 
+[RESTful API best practice article](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/)
+
 [Restful API Tutorial/vidoes](https://restapitutorial.com/)
+
+**API process**: client (web browser) makes an HTTP request -- > to an API server (another machine).  The API server returns a HTTP response to the client.
 # RESTful APIs
 
 **REST** = representaional state transfer
@@ -62,3 +66,8 @@ request body (JSON):
 ![HTTP response/request table for bookstore](http.request.response.png)
 ### Planets
 ![Planets HTTP response/request table](http.request.response.Planets.png)
+---
+## API Keys
+- To get a key, one generally has to create an account and apply for a key, then find the key within the website while logged in.  
+- The key can be added as a request header, a query parameter, or inside a cookie (At Ada, we'll generally add them to the HTTP request as a query param).   
+- APIs may have **rate limits**, which limit the # of calls (requests) that a client can make within a given time frame.

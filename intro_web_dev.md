@@ -60,5 +60,23 @@ Note: <mark> cmd+alt+i </mark>to inspect page for html/css/network requests, etc
 -**URI** is a uniform resouce identifier.  Within this broader category fall URL and URN (ie- google.com)
    - **URL** is more specific uniform resource locator (https://gooogle.com)
    - **URN** uniform resouce name 
+---
+## Summary
+When using a website, requests and responses are being sent frequently between the client and the server (another computer).  The server will also communicate with its database, as needed prior to sending back its response.
 
+**HTTP Requests** from a client to a server **will contain**:
+- METHOD (such as GET, POST, PATCH, DELETE)
+- Path (or request url)  
+- 
+It may also contain:
+- Headers (colon separated pairs of info)
+- Body (additional resources to send to server)
+- Query parameters (key-value pairs that make requests more specific. They are added to request url following a '?')
 
+**HTTP Responses** (sent back from server) will contain:
+- status code (number between 100 and 600)
+- status message (such as OK, Created, Moved permanently, Not found, Internal Server Error)  
+
+It may also contain:
+- Headers
+- Body
