@@ -18,3 +18,23 @@
 - **Tip**: use a breakpoint, placed at time of calling response, and step into funciton with debugger, to inspect the api's response.
   
 ---
+
+Note: 'JSON viewer awesome' [Dev tool- free, chrome extension to view JSON in tree structure](https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc?hl=en-US)
+
+Example from 100days of Python using [International Space Station API](http://open-notify.org/Open-Notify-API/ISS-Location-Now/)
+```
+import urllib2
+import json
+
+req = urllib2.Request("http://api.open-notify.org/iss-now.json")
+response = urllib2.urlopen(req)
+
+obj = json.loads(response.read())
+
+print obj['timestamp']
+print obj['iss_position']['latitude'], obj['data']['iss_position']['latitude']
+
+# Example prints:
+#   1364795862
+#   -47.36999493 151.738540034
+```

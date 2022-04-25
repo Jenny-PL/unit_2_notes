@@ -15,3 +15,6 @@ Q: Why is this in quotes, when it is a variable?  Does it always read in as a st
 ---
 
 Q: running into trouble at error handling (api_books_2a). Getting attribute error re: tuples. why?
+
+---
+Q: from api_reqeust.py, why is json() not being used?
