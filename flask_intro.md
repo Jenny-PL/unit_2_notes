@@ -67,6 +67,50 @@ Instantiating Blueprint within routes.py:
 hello_world_bp = Blueprint("hello_world_bp", __name__)  
 books_bp = Blueprint("books", __name__, url_prefix="/books")
 ```
+---
+Note: flask server running elsewhere and want to find places that flask is running:   
+Example error:  
+`OSError: [Errno 48] Address already in use`
+ 
+`pgrep -fla flask`  
+To stop everything with flask in its argument list `pkill -fla flask`  
+To kill a  particular server:  
+`kill -<server_id>`  
+
+
+## Handle errors in Flask
+Example: 
+```
+@cats_bp.route("/<cat_id>", methods=["GET"])
+def get_one_cat(cat_id):
+    try:
+        cat_id = int(cat_id)
+    except ValueError:
+        response = {"msg": f"Invalid id: {cat_id}.  Need a cat id number"}
+        return jsonify(response), 400
+
+    chosen_cat = None
+    for cat in cats:
+        if cat.id == cat_id:
+            chosen_cat = cat
+            break
+
+    if chosen_cat is None:
+        response = {'msg': f"Could not find a cat with id {cat_id}"}
+        return jsonify(response), 404
+
+    response = {
+            'id':chosen_cat.id,
+            'name': chosen_cat.name,
+            'age': chosen_cat.age,
+            'color': chosen_cat.color
+            }
+
+    return jsonify(response), 200
+```
+
+
+---
 ## Dev Workflow
 Our dev workflow for Flask development may now look like this:
 - cd into a project root folder
