@@ -18,3 +18,6 @@ Q: running into trouble at error handling (api_books_2a). Getting attribute erro
 
 ---
 Q: from api_reqeust.py, why is json() not being used?
+ -- Also, I used `FLASK_ENV=development flask run` to run flask, then pressed 'play' button to run this code, but only got:   
+ `/usr/local/bin/python3 /Users/jennyluong/Developer/projects/classroom/unit_2_notes/api_request.py`    
+ - How to do I run the code within flask on, to see status code in terminal?
