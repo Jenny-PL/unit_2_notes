@@ -31,7 +31,9 @@ Restart Postgres with:
 
 `\c <name>` to connect to a database by name  
 `\dt`  view a list of all tables that are within the connected database   
-` \d+ <table_name>` Shows more info about a table (ie- coulumn data types)
+` \d+ <table_name>` Shows more info about a table (ie- coulumn data types)  
+`SELECT COUNT(*) from <table_name>`:   
+`SELECT COUNT(*) as num_planets from planets;`
 
 `CREATE DATABASE db_name;`  This will create a new data_base with the name: db_name.  You must use a `;` at end of the command.    
 
