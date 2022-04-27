@@ -51,7 +51,7 @@ new_db=#
 ```
 
 ---
-## Creating at Table 
+## Creating at Table (**C**RUD)
 When creating a table, include:
 - table name
 - Columns and their data type
@@ -122,7 +122,7 @@ It is not essential to add in (column1, column2 ,etc) if the values are in order
 `guest_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY`,   
 then you cannot give a value in the column explicitly.
 ---
-## Retrieving values within a table
+## Retrieving values within a table, aka Reading (C**R**UD)
 - ` SELECT * from table_name`   
 - `SELECT column_name from table_name`   
 
@@ -137,3 +137,33 @@ then you cannot give a value in the column explicitly.
 
  ### Comparing with NULL:
  - Must use `IS NULL` or `IS NOT NULL`; cannot use = (it will return false)
+
+## Updating data (CR**U**D)
+
+```
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+**Where** is important... without it, evertyhing is updated!  
+
+Another example:
+```
+UPDATE media
+SET publication_year = '1990', description_text = NULL
+WHERE media_id = 1;
+```
+---
+## Deleting data (CRU**D**)
+
+Syntax to delete from a table:
+```
+DELETE FROM table_name
+WHERE condition;
+```
+Example:
+```
+DELETE FROM drivers
+WHERE license_expires = '2020'
+```
+<mark>Without **where**, everything from table would be deleted!</mark>
