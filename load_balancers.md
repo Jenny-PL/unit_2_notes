@@ -1,7 +1,7 @@
 # Load balancers
 - may also be called Application Delivery Controlers (ADCs)  
 
-**Role**: Distribute requests from clients to a **what** over the available servers, to avoid over-burdening servers and maximize speed and function.  As new servers are added, route traffic to those servers.  If a server has a malfunction, re-route that traffic.
+**Role**: Distribute requests from clients among available servers, to avoid over-burdening servers and maximize speed and function.  As new servers are added, route traffic to those servers.  If a server has a malfunction, re-route that traffic.
 
 **How does it work?**  There are several different algorithms for determining how to distrubute requests among servers.
 
