@@ -85,3 +85,61 @@ Example with legos // web app
 [Resource shared with diff between router and modem](https://lifewire.com/difference-between-modem-and-router-4159854)
 
 ---
+## Web servers and packets (Amel)
+- Web server: can be an actual computer or a ??
+- Packets: data being sent over the internet in chucks
+- Packet contains:
+  - Header: 
+  - Payload: actual data itself
+  - Trailer: tells recipient that it mad it to the end
+
+## IP Addresses (Doina)
+- Internet protocol address: numerical label with a unique #
+- Each IP address is unique
+- IP addresses are required to browse the internet
+- IPVv4 is a 32 bit number that uniques IDs a ??
+
+## Bandwidth (Tangleap)
+- **Bandwidth:** a measuremeant of how much data can be sent/recieved at a time
+- **Measures capacity, not speed**
+- Can be measured it bits per second
+- example: streaming High def video requires > bandwith than low def video
+- Throughput vs. Latency:
+  - **throughput**: amount of data that can be sent/recieved in a timeframe
+  - **latency**: time it takes for data to reach destination after being sent
+---
+## Firewall (Jodi)
+- Filters data coming into your network and out of your network, onto the internet
+- Example: some gvts restrict what ppl can access on internet and post to the internet.
+- VPN: virtual private networks; encrypt data and make it anonymous
+---
+## Web Hosting (Liqing)
+- Allows a website to be available to everyone -- beyond just accessed on your own computer through localhost.
+- dedicated web hosting vs. VPS hosting vs. Cloud hosting
+---
+## Domain Name System- DNS (Amy)
+- Translates domain name into IP addresses 
+- domain name: name we know (ie- google, wikipedia)
+
+## HTTP and HTTPS
+- HTTP: Hypertext transfer protocol
+  - HTTP cookies: a small piece of data
+    - session mngmt, personalization, tracking
+- HTTPS: HTTP + 'secure'
+  - encryption (not sent as plain text)
+  - data integrity
+  - authenitication
+
+## Sed and awk (Mitra)
+- bash commands
+- useful for data manipulation
+- **Sed**: stream-oriented, non-interactive, text editor
+- `sed 's/foo/bar/g' file`: replace foo with bar in each place in the file
+- **awk**: used to manipulate columns of data
+
+## Four Layers of Internet (Marjana)
+- Application - example HTTP, sending messages between applications/web servers
+- Transport
+- Internet (Network layer)
+- Link: (bottom layer) 
+

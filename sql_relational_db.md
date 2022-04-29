@@ -1,4 +1,5 @@
 # Database relationships
+- [dbdiagram.io: for drawing out diagrams from code](https://dbdiagram.io/home)
 
 ## ERDs (Entity- relationship diagram)
 - Databases can be drawn in diagrams, called ERDs (Entity-relationship diagram).  
@@ -71,3 +72,23 @@ FROM vendors
 INNER JOIN products
 ON vendors.id = products.vendor_id;
 ```
+
+### Class practice with Twitter example ERD
+- Tweets, users, likes, profiles tables
+- Find all the users?
+  - SELECT * FROM users;
+- Find all tweets from user with ID 1?
+  - SELECT * FROM tweets WHERE user_id = 1;
+- Find all tweets user 1 has liked?
+  - SELECT * from tweets INNER JOIN likes ON tweets.user_id = likes.user_id WHERE likes.user_id =1;
+
+## All categories liked by user "Lovelace"
+```
+SELECT product.category, COUNT(product.category) as product_count from products INNER JOIN hearts ON hearts.product_id = products.id INNER JOIN users on user.id = hearts.user_id WHERE users.name = 'Ada Lovelace'
+GROUP BY products.category
+ORDER BY product_count DESC LIMIT 1;
+```
+## What are the stores that Ada Lovelace has hearted products from?
+```
+SELECT DISTINCT stores.name FROM users
+INNER JOIN hearts on users.id = hearts.user_id INNER JOIN products on hearts.product_id  = products.id INNER JOIN stores on products.store_id = stores.id WHERE users.name = 'Ada Lovelace';
