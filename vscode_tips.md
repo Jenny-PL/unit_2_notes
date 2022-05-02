@@ -1,4 +1,8 @@
 
+
+## Multi-line Editing 
+  - `Command + Shift + L` : Will put cursors at each occurance of selected text
+
 ## Line wrapping within a string (python):
 - To wrap the line: use `() `outside of entire string; use `"` to end on line, add in `f`-string to start next wrapped- line.  **preferred**
 - Another line-wrap option:  Use `"` to end first line, then `\`, and start new `f`-string:  
