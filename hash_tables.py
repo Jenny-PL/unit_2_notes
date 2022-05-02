@@ -143,4 +143,48 @@ def is_permutation(red, blue):
 
     return red_frequency_hash == blue_frequency_hash
 
+def is_palindrome_permutation(string):
+    '''
+    input: str
+    output: True or False; True if letters could be re-arranged as a palindrome
+    '''
+    char_freq_hash = {}
     
+    for letter in string:
+        if letter in char_freq_hash:
+            char_freq_hash[letter] += 1
+        else:
+            char_freq_hash[letter] = 1
+    print(char_freq_hash)
+    
+    odd_frequencies = 0 
+    for value in char_freq_hash.values():
+        if value % 2 != 0:
+            odd_frequencies += 1
+    if len(string) % 2 == 0 and odd_frequencies > 0:
+        return False
+    elif odd_frequencies > 1:
+        return False
+    else:
+        return True
+
+answer = is_palindrome_permutation("string")
+print(answer)
+
+# alternate answer-- I don't understand the 'if frequency % 2' part
+def is_palindrome_permutation(text):
+    frequency_hash = {}
+    for char in text:
+        if char in frequency_hash:
+            frequency_hash[char] += 1
+        else:
+            frequency_hash[char] = 1
+
+    odd_matches_count = 0
+    for frequency in frequency_hash.values():
+        if frequency % 2:
+            odd_matches_count += 1
+
+    return odd_matches_count <= 1
+result = is_palindrome_permutation('text')
+print(result)
