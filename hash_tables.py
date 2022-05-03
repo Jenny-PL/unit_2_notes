@@ -161,9 +161,9 @@ def is_palindrome_permutation(string):
     for value in char_freq_hash.values():
         if value % 2 != 0:
             odd_frequencies += 1
-    if len(string) % 2 == 0 and odd_frequencies > 0:
-        return False
-    elif odd_frequencies > 1:
+    # if len(string) % 2 == 0 and odd_frequencies > 0:
+    #     return False
+    if odd_frequencies > 1:
         return False
     else:
         return True
@@ -182,7 +182,7 @@ def is_palindrome_permutation(text):
 
     odd_matches_count = 0
     for frequency in frequency_hash.values():
-        if frequency % 2:
+        if frequency % 2: # This means, 
             odd_matches_count += 1
 
     return odd_matches_count <= 1
