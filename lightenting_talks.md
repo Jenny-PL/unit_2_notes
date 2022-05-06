@@ -1,4 +1,4 @@
-# Unite 2 Lightening Talks
+# Unit 2 Lightening Talks
 
 ## Refactoring and Clean code (Andrea)
 - **Refactoring**: You should not add any new functionality
@@ -143,3 +143,92 @@ Example with legos // web app
 - Internet (Network layer)
 - Link: (bottom layer) 
 
+## UML: Unified Modeling Language (Ada)
+- Kind of like a standardized pseudo-code
+- Diagrams (several types):
+  - Structural, behavioral, sequence 
+- Simplifies ideas: able to see what is happening visually
+- can commuinicate whats going on for ppl who aren't programmers
+
+## Abstract Class & Interface (Olena)
+- **Abstract class**: Can't be instantiated directly
+- `from abc import ABC, abstractmethod` in Python
+  - generalize behavior from more ??
+- **Interface**: pure abstract class.  A child class must implement all the methods. (Python doesn't support?)
+  - purpose: standardize behavior
+
+## XML and JSON (Tori)
+**XML**: 'eXtensible Markup Language":
+  - uses **tags**, which are defined by the author
+  - looks similar to HTML
+  - example: `<child> </child>`
+  - Has a nested structure
+  - scalable: can add data in/take out, so it can change in size
+  - human-readable
+  - somehow more powerful  
+  
+**JSON**: "JavaScript Object Notation", however is language-indep
+- more popular, easier to use
+---
+## Views and Templates in Flask (Lulu)
+- Flask view: Within model-view-controller, is the view
+- **Templates**: files with static data
+- **Jinja**: Flask's default template engine
+  - Template folder will hold templates
+  - Jinja syntax (delimiters):
+  - `{%.... %}` conditional `{% end for/if %}`
+  - Other option: HTML folder in Template ile:
+    - `import render_template`
+    - call render_template: `render_template(file_name.html)`
+---
+## Non-Relational Databases (Ying)
+- Relational databases can be overwhelmed -- have to maintain relationships (heavy on memory/processing demands)
+- NoSQL (non relational databases): split workload across multiple servers.  
+- Much more scalable
+- Types: 
+  - key-value stores (can only have two columns: key-value, ex: DynamoDB, Redis)
+  - Document Stores (ex: MongoDB, CouchDB)
+  - Column Family Data Stores, aka Wide Column Data Stores
+  - Graph Databases 
+---
+## Site Maps (Joanna)
+  - specific model of a website's content:
+    - for users: table of content, helps to navigate (user experience)
+    - for search engines: uses the site map to determine what to return for certain searches
+---
+## Wireframes (Fena)
+- Most commonly used by UX/UI designers
+- A way to show developers what the designers want the look/features to be
+- clarifies website features
+  - low, mid, and high fidelity: how much detail goes into it
+    - low fidelity: brainstorm/sketch, not to scale
+      - tools: paper/whiteboard
+    - mid fidelity: more accurate to webpage/phone screen
+      - tools: sketch, Figma, Adobe XD
+    - high fidelity: realistic, accurate color scheme, etc
+---
+## SVGs (Marlyn)
+- Scalable Vector Graphic
+  - They do not loose quality when zoom in
+  - Created with paths, have start/end 
+  - Compared with Raster images:
+    - load faster; made up of text
+    - Can be more accessible to ppl who have visual impairments, etc (can be converted to audio)
+    - A very detailed image file may be too large (so raster may be better in that case)
+---
+## SEO & Meta Tags (Elaine)
+**SEO**: Search Enging Optimization - to improve visibility of a site on a search engine  
+**SERP**: Search enging results page  
+**Web Crawlers**, aka spiders: Bots operated by search engines; job is to go through and index a website.  
+**Keyword Stuffing**: Adding keywords to try to get a site to appear higher in SERPs (bad practice)
+- **As developers**:
+  -  We can make a **sitemap**  
+  -  **robots.txt**: tells crawlers things to ignore in search requests
+  -  **meta tags within HTML**: Tells a serach engine what site is about. `<title> </title>`, `<meta>` 
+---
+## Shell Script (Nina)
+**Shell scripting**: 
+- Can have a file with `.sh` : file_name.sh
+- Then run this file 
+  - `chmod +x file_name.sh` makes this file executable (??)
+- This is helpful if you want to execute many lines of code in the terminal
