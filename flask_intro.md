@@ -41,7 +41,7 @@ Default Flask Server URL is:
 
 ## Return responses:
 - By default, a response with no specified status code returns 200 OK
-
+Status code: 
 ---
 
 ## Blueprints

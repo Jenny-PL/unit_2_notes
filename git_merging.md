@@ -1,5 +1,24 @@
 # Git merging
 
+- New branches are a way to work on new features without affecting the current, (hopefully) working code
+- When ready to merge with main:
+  - 1. merge **main** into current_branch
+  - 2. resolve conflicts while on current_branch
+  - 3. Now can merge **current_branch** into main
+  - 4. Can delete current_branch
+
+Uses for branches:
+- Feature branch:
+  - active development typically happens **away** from the main branch
+  - Each branch is for making commits on **one feature**
+- BugFix branch:
+  - fix spelling errors/typos
+  - modify existing feature and test it
+-  "proof of concept" branch: 
+   -  experimental
+   -  don't worry about clean code
+   -  timebox (less than 1 day)
+   -  have a clear goal
 ## commands:
 ```
 git branch 
