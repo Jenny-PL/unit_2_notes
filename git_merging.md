@@ -1,5 +1,5 @@
 # Git merging
-
+[git resources for when you make mistakes](https://ohshitgit.com/)
 - New branches are a way to work on new features without affecting the current, (hopefully) working code
 - When ready to merge with main:
   - 1. merge **main** into current_branch
@@ -52,3 +52,8 @@ $ git switch <destination-branch-name>
 ```
 $ git branch -d <branch-name>
 ```
+
+**git stash**:
+- saves, removes
+- access later with: `git stash list`
+- `git stash pop`
