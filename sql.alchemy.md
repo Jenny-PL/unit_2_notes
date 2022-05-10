@@ -68,10 +68,13 @@ Generate Migrations After Each Model Change
 When running this command ourselves, we should replace the "adds Book model" with a description relevant to our recent changes.... this is similar to text with a git commit.
 
 Next, run this separate command to actually run and apply the generated migrations:
+
 ```
-flask db migrate
-``` 
-and 
+(venv) flask db upgrade
 ```
-flask db upgrade
+A **migrations** folder will appear within your project's root folder.    
+
+Now you can go to postgres to see your data base:
+```
+(venv) psql -U postgres
 ```

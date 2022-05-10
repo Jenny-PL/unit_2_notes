@@ -20,6 +20,7 @@ Uses for branches:
    -  timebox (less than 1 day)
    -  have a clear goal
 ## commands:
+
 ```
 git branch 
 ```
@@ -57,3 +58,10 @@ $ git branch -d <branch-name>
 - saves, removes
 - access later with: `git stash list`
 - `git stash pop`
+
+
+```
+code .git/config   # this will give you more info about your repo
+```
+Another resource:  
+- sourcetree (free to be able to see a visual of what's going on)
