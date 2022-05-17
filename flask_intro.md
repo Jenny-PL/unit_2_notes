@@ -1,5 +1,6 @@
 # Flask intro
-Flask acts as a web server. It needs to be running to be able to recieve and send back responses. (<mark>Q: Is this accurate?</mark>)
+Flask acts as a web server. It needs to be running to be able to recieve and send back responses. 
+- Flask provides patterns to define endpoints, read HTTP requests, define responses, and specifies where to put the code.
 
 ```.
 ├── app
@@ -23,7 +24,8 @@ def create_app(test_config=None):
     return app
 ```
 **To run flask**:
-`(venv) $ flask run`  
+`(venv) $ flask run` 
+  - Looks fo rfolder called **app** and for `create_app` function.
 
 **To run flask with debugger**:
 `(venv) FLASK_ENV=development flask run`
@@ -43,8 +45,9 @@ Default Flask Server URL is:
 - By default, a response with no specified status code returns 200 OK
 Status code: 
 ---
-
-## Blueprints
+Without blueprints, a route will be:  
+@app.route("endpoint", methods=['GET', etc])
+## Blueprints- can be helpful for organizing routes
 within app/__init__.py
 ```
 from flask import Flask
@@ -178,4 +181,8 @@ class Child(Base):
     parent_id = Column(Integer, ForeignKey('parent.id'))
     parent = relationship("Parent", back_populates="children")
 ```
+---
+## Debugging:
+- `print(response.status_code)` #output: 200, 404, etc
+- save api call into a variable, ie: response
 
