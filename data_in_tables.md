@@ -7,7 +7,7 @@
 What will you do with data?
 **CRUD**: Create, Read, Update, Delete
 
-Note: It is easy to add/delete rows; columns are hard to change.  To change a column, you must go thru each record and change it within the record.
+Note: It is easy to add/delete rows; columns are harder to change.  To change a column, you must go thru each record and change it within the record.
 
 ---
 ## Relational Databases:

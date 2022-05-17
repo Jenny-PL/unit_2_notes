@@ -1,4 +1,10 @@
 # Models, using SQLAlchemy, Alembic, etc...
+- SQLAlchemy wil connect postgres app and flask
+- Object Relational Mapper (ORM)
+- Instance in a class corresponds to a record in a table
+- **Model** represents one concept relevten tot the app (defines state and behavior)
+  - A class that talks to a database
+- Database migration (aka schema migration): changes to the schema/data table
 
 ## Run postgres:
 
@@ -78,3 +84,13 @@ Now you can go to postgres to see your data base:
 ```
 (venv) psql -U postgres
 ```
+## General step by step:
+1. create database in postgres
+2. connect database and Flask
+3. create model files
+   1. create a class for each model
+   2. define state/behavior of the model
+4. Initialize migrations: create instrutions to modify database
+   1. Only do this one time
+5. Generate migrations & apply migrations: apply instructions
+   1. Do this after making a new model, or changes to table/schema

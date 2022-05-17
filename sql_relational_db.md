@@ -92,3 +92,6 @@ ORDER BY product_count DESC LIMIT 1;
 ```
 SELECT DISTINCT stores.name FROM users
 INNER JOIN hearts on users.id = hearts.user_id INNER JOIN products on hearts.product_id  = products.id INNER JOIN stores on products.store_id = stores.id WHERE users.name = 'Ada Lovelace';
+```
+## Resouces: 
+- lucid chart: free software to make ERDs
