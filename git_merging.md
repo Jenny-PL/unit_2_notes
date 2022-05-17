@@ -44,10 +44,11 @@ Important to think about **which branch you're currently on**.  The new branch w
 ```
 $ git switch <destination-branch-name>
 ```
- Historically, `$ git checkout <destination-branch-name>` was the way to switch branches. Now **git switch** is prefered`
-    - Before switching, you must either:
-    - commit any unstaged and/or staged changes. This way, these changes will stay on the current branch before switching.
-    - Or, Use Git's stash feature, which will save changes in the **stash** <mark> what is this? </mark>, instead of a commit.
+ Historically, `$ git checkout <destination-branch-name>` was the way to switch branches. Now **git switch** is prefered.  
+   - Before switching, you must either:
+     - commit any unstaged and/or staged changes. This way, these changes will stay on the current branch before switching.
+     - Or, Use Git's stash feature, which will save changes in the **stash**, instead of a commit.
+     - **Note**: <mark> If you haven't saved, you can switch to a diff branch and accidentally make the changes there instead. </mark>
 
 **Delete a branch**:
 ```
@@ -57,7 +58,7 @@ $ git branch -d <branch-name>
 **git stash**:
 - saves, removes
 - access later with: `git stash list`
-- `git stash pop`
+- `git stash pop`: Puts the changes back into your code.
 
 
 ```
@@ -65,3 +66,10 @@ code .git/config   # this will give you more info about your repo
 ```
 Another resource:  
 - sourcetree (free to be able to see a visual of what's going on)
+
+## Other notes:
+- **Squash and merge**: makes 1 commit for the entire branch 
+- On VSCode- red color represents remote; green represents local branch
+- When deleting branches, delete from **both** the local and the remote branches:
+  - `git branch -d <branch_name>`
+  - remote: `git push origin --delete <branch_name>`

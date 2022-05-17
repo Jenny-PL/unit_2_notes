@@ -125,3 +125,57 @@ Our dev workflow for Flask development may now look like this:
 - Deactivate the virtual environment
 ---
 **To view all current softwares/versions within your venv**: `(venv) pip freeze`
+
+--- 
+## Flask models (classes)
+
+There should be a separate file for each model/class:  Example content in file:  
+```
+from app import db
+
+class Book(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String)
+    description = db.Column(db.String)
+```
+---
+on app/\_\_init\_\_\.py :
+
+within **def create_app(test_config=None) function**:  
+- import the models:
+-  `from app.models.book import Book`   
+-  `from app.models.author import Author`
+---
+### One-to-Many relationships:
+
+```
+class Parent(Base):
+    __tablename__ = 'parent'
+    id = db.Column(db.Integer, primary_key=True)
+    children = relationship("Child", back_populates="parent")
+```
+Example parent class:
+```
+class Author(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String)
+    Books = db.relationship("Book", back_populates="author")
+```
+Example child class:
+```
+class Book(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String)
+    description = db.Column(db.String)
+    author_id = db.Column(db.Integer,db.ForeignKey('author.id'))
+    author = db.relationship("Author", back_populates="books")
+```
+
+```
+class Child(Base):
+     __tablename__ = 'child'
+    id = Column(Integer, primary_key=True)
+    parent_id = Column(Integer, ForeignKey('parent.id'))
+    parent = relationship("Parent", back_populates="children")
+```
+
