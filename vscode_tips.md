@@ -2,6 +2,7 @@
 
 ## Multi-line Editing 
   - `Command + Shift + L` : Will put cursors at each occurance of selected text
+  - Highlight a piece of code (all matching code will also highlight): `command + d` will give more cursors to this code.  Hold down`command` and keep clicking `d` to add each additional cursor.
 
 ## Line wrapping within a string (python):
 - To wrap the line: use `() `outside of entire string; use `"` to end on line, add in `f`-string to start next wrapped- line.  **preferred**
