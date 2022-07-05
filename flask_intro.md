@@ -30,6 +30,10 @@ def create_app(test_config=None):
 **To run flask with debugger**:
 `(venv) FLASK_ENV=development flask run`
 
+**Note: Having The environment variable in the .env file, FLASK_ENV, will automatically enable development mode.** This enables hot-reloading, which is a feature that refreshes the Flask server every time there is a detected change.
+
+
+
 To stop running:
 `ctrl + c`
 
